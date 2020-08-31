@@ -238,8 +238,11 @@ img {
 	transform: translate(-50%, -50%);
 	width: 528px;
 	height: 581px;
-	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	padding: 40px;
 
+	font-size: 12px;
+	line-height: 1.16;
+	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	background-color: var(--primary-bg-color);
@@ -273,6 +276,88 @@ img {
 
 .is-hidden .modal {
 	transform: translate(-50%, 100%);
+}
+
+.modal-title {
+	margin-top: 0;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	color: var(--title-text-color);
+}
+
+.modal-body {
+	flex-direction: column;
+}
+
+.modal-body p {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.modal-body label {
+	margin-bottom: 10px;
+}
+
+.modal-body .modal-input {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 12px 16px;
+	margin-top: 4px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+
+.modal .modal-textarea {
+	resize: none;
+	height: 120px;
+	overflow: auto;
+}
+
+.modal .modal-textarea::placeholder {
+	font-size: 14px;
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-body .modal-checkbox {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.modal-checkbox {
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.modal-checkbox input {
+	display: block;
+	width: 16px;
+	height: 15px;
+	margin-right: 7px;
+}
+
+.send-btn {
+	margin: auto;
+	padding: 10px 55px;
+
+	color: var(--secondary-text-color);
+	background-color: var(--assent-color);
+	border: 1px solid var(--assent-color);
+	border-radius: 4px;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+	cursor: pointer;
 }
 
 /*      Преимущества       */
@@ -717,7 +802,7 @@ img {
 	line-height: 1.56;
 	color: var(--secondary-text-color);
 	background: rgba(33, 150, 243, 0.9);
-	transform: translate(0, 100%);
+	transform: translate(0, calc(100% + 1px));
 	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -729,5 +814,5 @@ img {
 
 .examples-list .item:hover .examples-text,
 .examples-list .item:focus .examples-text {
-	transform: translate(0, 0%);
+	transform: translate(0, 0);
 }

@@ -57,21 +57,37 @@
 			</section>
 			<!-- Форма для обратной связи -->
 			<section class="dropbox flexbox is-hidden" data-modal>
-				<div class="modal">
-					<!-- <h2>Оставьте свои данные, мы вам перезвоним</h2>
-					<input type="text" placeholder="Имя" />
-					<input type="tel" placeholder="Телефон" />
-					<input type="email" placeholder="Почта" />
-					<textarea placeholder="Комментарий"></textarea>
-					<input type="checkbox" />
-					<p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p>
-					<button>Отправить</button> -->
-					<button class="close-btn" aria-label="Закрыть" data-modal-close>
-						<svg class="icon">
-							<use xlink:href="./images/sprite.svg#icon-close"></use>
-						</svg>
-					</button>
-				</div>
+				<form class="modal">
+					<h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+					<div class="modal-body flexbox">
+						<label>
+							Имя
+							<input class="modal-input" type="text" name="name" />
+						</label>
+						<label>
+							Телефон
+							<input class="modal-input" type="tel" name="phone-number" />
+						</label>
+						<label>
+							Почта
+							<input class="modal-input" type="email" name="email" />
+						</label>
+						<label>
+							Комментарий
+							<textarea placeholder="Введите текст" class="modal-input modal-textarea" name="comment"></textarea>
+						</label>
+						<label class="modal-checkbox">
+							<input type="checkbox" />
+							<p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p>
+						</label>
+						<button class="send-btn">Отправить</button>
+						<button class="close-btn" aria-label="Закрыть" data-modal-close>
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
 			</section>
 			<!-- Преимущества -->
 			<section class="features">
