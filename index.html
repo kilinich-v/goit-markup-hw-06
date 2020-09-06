@@ -30,7 +30,7 @@
 					<li class="item"
 						><a class="link" href="mailto:info@example.com">
 							<svg class="icon icon-mail">
-								<use xlink:href="./images/sprite.svg#mail"></use>
+								<use href="./images/sprite.svg#mail"></use>
 							</svg>
 							info@example.com</a
 						></li
@@ -38,7 +38,7 @@
 					<li class="item"
 						><a class="link" href="tel:+380991111111">
 							<svg class="icon icon-phone">
-								<use xlink:href="./images/sprite.svg#phone"></use>
+								<use href="./images/sprite.svg#phone"></use>
 							</svg>
 							+38 099 111 11 11</a
 						></li
@@ -52,42 +52,60 @@
 			<section class="hero flexbox">
 				<div class="hero-container">
 					<h1 class="hero-title list">Эффективные решения для вашего бизнеса</h1>
-					<button class="hero-btn link list" href="" data-modal-open>Заказать услугу</button>
+					<button class="hero-btn link list" href="./" data-modal-open>Заказать услугу</button>
 				</div>
 			</section>
 			<!-- Форма для обратной связи -->
 			<section class="dropbox flexbox is-hidden" data-modal>
-				<form class="modal">
-					<h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-					<div class="modal-body flexbox">
-						<label>
+				<div class="modal">
+					<h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+					<form class="form flexbox">
+						<label class="form-field">
 							Имя
-							<input class="modal-input" type="text" name="name" />
+							<input class="form-input" type="text" name="name" />
+							<svg class="form-icon">
+								<use href="./images/sprite.svg#form-bust"></use>
+							</svg>
 						</label>
-						<label>
+						<label class="form-field">
 							Телефон
-							<input class="modal-input" type="tel" name="phone-number" />
+							<input class="form-input" type="tel" name="phone-number" />
+							<svg class="form-icon">
+								<use href="./images/sprite.svg#form-phone"></use>
+							</svg>
 						</label>
-						<label>
+						<label class="form-field">
 							Почта
-							<input class="modal-input" type="email" name="email" />
+							<input class="form-input" type="email" name="email" />
+							<svg class="form-icon">
+								<use href="./images/sprite.svg#form-mail"></use>
+							</svg>
 						</label>
-						<label>
+						<label class="form-field form-comment">
 							Комментарий
-							<textarea placeholder="Введите текст" class="modal-input modal-textarea" name="comment"></textarea>
+							<textarea
+								placeholder="Введите текст"
+								class="form-input form-textarea"
+								name="comment"
+								id="comment"
+							></textarea>
 						</label>
-						<label class="modal-checkbox">
-							<input type="checkbox" />
-							<p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p>
+						<label class="form-field form-agreement">
+							<input class="check-input visually-hidden" type="checkbox" name="policy" />
+							<svg class="form-icon">
+								<use href="./images/sprite.svg#icon-checked"></use>
+							</svg>
+							Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
 						</label>
-						<button class="send-btn">Отправить</button>
+
+						<button class="send-btn" type="submit">Отправить</button>
 						<button class="close-btn" aria-label="Закрыть" data-modal-close>
 							<svg class="icon">
-								<use xlink:href="./images/sprite.svg#icon-close"></use>
+								<use href="./images/sprite.svg#icon-close"></use>
 							</svg>
 						</button>
-					</div>
-				</form>
+					</form>
+				</div>
 			</section>
 			<!-- Преимущества -->
 			<section class="features">
@@ -95,30 +113,30 @@
 					<ul class="features-list flexbox list">
 						<li class="item">
 							<svg class="icon">
-								<use xlink:href="./images/sprite.svg#details"></use>
+								<use href="./images/sprite.svg#details"></use>
 							</svg>
 							<h3 class="features-title">Внимание к деталям</h3>
 							<p> Идейные соображения, а также начало повседневной работы по формированию позиции. </p>
 						</li>
 						<li class="item">
 							<svg class="icon">
-								<use xlink:href="./images/sprite.svg#clock"></use>
+								<use href="./images/sprite.svg#clock"></use>
 							</svg>
-							<h3 class="features-title">Пунктуальность</h3>
+							<h3 class="features-title section-subtitle">Пунктуальность</h3>
 							<p> Задача организации, в особенности же рамки и место обучения кадров влечет за собой. </p>
 						</li>
 						<li class="item">
 							<svg class="icon">
-								<use xlink:href="./images/sprite.svg#diagram"></use>
+								<use href="./images/sprite.svg#diagram"></use>
 							</svg>
-							<h3 class="features-title">Планирование</h3>
+							<h3 class="features-title section-subtitle">Планирование</h3>
 							<p> Равным образом консультация с широким активом в значительной степени обуславливает. </p>
 						</li>
 						<li class="item">
 							<svg class="icon">
-								<use xlink:href="./images/sprite.svg#astronaut"></use>
+								<use href="./images/sprite.svg#astronaut"></use>
 							</svg>
-							<h3 class="features-title">Современные технологии</h3>
+							<h3 class="features-title section-subtitle">Современные технологии</h3>
 							<p> Значимость этих проблем настолько очевидна, что реализация плановых заданий. </p>
 						</li>
 					</ul>
@@ -128,18 +146,18 @@
 			<!-- Чем мы занимаемся -->
 			<section class="activity">
 				<div class="container">
-					<h2 class="activity-title">Чем мы занимаемся</h2>
+					<h2 class="activity-title section-title">Чем мы занимаемся</h2>
 					<ul class="list flexbox">
 						<li class="item">
-							<h3 class="activity-text">Десктопные приложения</h3>
+							<h3 class="activity-text section-subtitle">Десктопные приложения</h3>
 							<img src="./images/desc.jpg" alt="Десктопные приложения" width="370" />
 						</li>
 						<li class="item">
-							<h3 class="activity-text">Мобильные приложения</h3>
+							<h3 class="activity-text section-subtitle">Мобильные приложения</h3>
 							<img src="./images/mobile.jpg" alt="Мобильные приложения" width="370" />
 						</li>
 						<li class="item">
-							<h3 class="activity-text">Дизайнерские решения</h3>
+							<h3 class="activity-text section-subtitle">Дизайнерские решения</h3>
 							<img src="./images/design.jpg" alt="Дизайнерские решения" width="370" />
 						</li>
 					</ul>
@@ -149,7 +167,7 @@
 			<!-- Наша команда -->
 			<section class="team">
 				<div class="container">
-					<h2 class="team-title">Наша команда</h2>
+					<h2 class="team-title section-title">Наша команда</h2>
 					<ul class="list">
 						<li class="item">
 							<img src="./images/kucherenko.jpg" alt="Николай Кучеренко" />
@@ -159,28 +177,28 @@
 								<li>
 									<a class="insta link" href="" aria-label="Ссылка на Instagram">
 										<svg class="icon icon-insta">
-											<use xlink:href="./images/sprite.svg#instagram"></use>
+											<use href="./images/sprite.svg#instagram"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="twitter link" href="" aria-label="Ссылка на Twitter">
 										<svg class="icon icon-twitter">
-											<use xlink:href="./images/sprite.svg#twitter"></use>
+											<use href="./images/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="facebook link" href="" aria-label="Ссылка на Facebook">
 										<svg class="icon icon-facebook">
-											<use xlink:href="./images/sprite.svg#facebook"></use>
+											<use href="./images/sprite.svg#facebook"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="linkedin link" href="" aria-label="Ссылка на LinkedIn">
 										<svg class="icon icon-linkedin">
-											<use xlink:href="./images/sprite.svg#linkedin"></use>
+											<use href="./images/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
@@ -194,28 +212,28 @@
 								<li>
 									<a class="insta link" href="" aria-label="Ссылка на Instagram">
 										<svg class="icon icon-insta">
-											<use xlink:href="./images/sprite.svg#instagram"></use>
+											<use href="./images/sprite.svg#instagram"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="twitter link" href="" aria-label="Ссылка на Twitter">
 										<svg class="icon icon-twitter">
-											<use xlink:href="./images/sprite.svg#twitter"></use>
+											<use href="./images/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="facebook link" href="" aria-label="Ссылка на Facebook">
 										<svg class="icon icon-facebook">
-											<use xlink:href="./images/sprite.svg#facebook"></use>
+											<use href="./images/sprite.svg#facebook"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="linkedin link" href="" aria-label="Ссылка на LinkedIn">
 										<svg class="icon icon-linkedin">
-											<use xlink:href="./images/sprite.svg#linkedin"></use>
+											<use href="./images/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
@@ -229,28 +247,28 @@
 								<li>
 									<a class="insta link" href="" aria-label="Ссылка на Instagram">
 										<svg class="icon icon-insta">
-											<use xlink:href="./images/sprite.svg#instagram"></use>
+											<use href="./images/sprite.svg#instagram"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="twitter link" href="" aria-label="Ссылка на Twitter">
 										<svg class="icon icon-twitter">
-											<use xlink:href="./images/sprite.svg#twitter"></use>
+											<use href="./images/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="facebook link" href="" aria-label="Ссылка на Facebook">
 										<svg class="icon icon-facebook">
-											<use xlink:href="./images/sprite.svg#facebook"></use>
+											<use href="./images/sprite.svg#facebook"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="linkedin link" href="" aria-label="Ссылка на LinkedIn">
 										<svg class="icon icon-linkedin">
-											<use xlink:href="./images/sprite.svg#linkedin"></use>
+											<use href="./images/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
@@ -264,28 +282,28 @@
 								<li>
 									<a class="insta link" href="" aria-label="Ссылка на Instagram">
 										<svg class="icon icon-insta">
-											<use xlink:href="./images/sprite.svg#instagram"></use>
+											<use href="./images/sprite.svg#instagram"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="twitter link" href="" aria-label="Ссылка на Twitter">
 										<svg class="icon icon-twitter">
-											<use xlink:href="./images/sprite.svg#twitter"></use>
+											<use href="./images/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="facebook link" href="" aria-label="Ссылка на Facebook">
 										<svg class="icon icon-facebook">
-											<use xlink:href="./images/sprite.svg#facebook"></use>
+											<use href="./images/sprite.svg#facebook"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="linkedin link" href="" aria-label="Ссылка на LinkedIn">
 										<svg class="icon icon-linkedin">
-											<use xlink:href="./images/sprite.svg#linkedin"></use>
+											<use href="./images/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
@@ -298,47 +316,47 @@
 			<!-- Постоянные клиенты -->
 			<section class="clients">
 				<div class="container">
-					<h2 class="clients-title">Постоянные клиенты</h2>
+					<h2 class="clients-title section-title">Постоянные клиенты</h2>
 					<ul class="list flexbox">
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-1"></use>
+									<use href="./images/sprite.svg#logo-1"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-2"></use>
+									<use href="./images/sprite.svg#logo-2"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-3"></use>
+									<use href="./images/sprite.svg#logo-3"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-4"></use>
+									<use href="./images/sprite.svg#logo-4"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-5"></use>
+									<use href="./images/sprite.svg#logo-5"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="item">
 							<a class="link" href="">
 								<svg class="icon">
-									<use xlink:href="./images/sprite.svg#logo-6"></use>
+									<use href="./images/sprite.svg#logo-6"></use>
 								</svg>
 							</a>
 						</li>
@@ -365,37 +383,46 @@
 					</address>
 				</div>
 				<div class="join">
-					<p class="join-title">присоединяйтесь</p>
+					<h2 class="join-title">присоединяйтесь</h2>
 					<ul class="social flexbox list">
 						<li>
 							<a class="insta link" href="" aria-label="Ссылка на Instagram">
 								<svg class="icon icon-insta">
-									<use xlink:href="./images/sprite.svg#instagram"></use>
+									<use href="./images/sprite.svg#instagram"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
 							<a class="twitter link" href="" aria-label="Ссылка на Twitter">
 								<svg class="icon icon-twitter">
-									<use xlink:href="./images/sprite.svg#twitter"></use>
+									<use href="./images/sprite.svg#twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
 							<a class="facebook link" href="" aria-label="Ссылка на Facebook">
 								<svg class="icon icon-facebook">
-									<use xlink:href="./images/sprite.svg#facebook"></use>
+									<use href="./images/sprite.svg#facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
 							<a class="linkedin link" href="" aria-label="Ссылка на LinkedIn">
 								<svg class="icon icon-linkedin">
-									<use xlink:href="./images/sprite.svg#linkedin"></use>
+									<use href="./images/sprite.svg#linkedin"></use>
 								</svg>
 							</a>
 						</li>
 					</ul>
+				</div>
+				<div class="subscribe">
+					<h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+					<form class="subscribe-form">
+						<label class="subscribe-field">
+							<input class="subscribe-input" type="email" name="email" placeholder="E-mail" />
+						</label>
+						<button class="subscribe-btn">Подписаться</button>
+					</form>
 				</div>
 			</div>
 		</footer>
